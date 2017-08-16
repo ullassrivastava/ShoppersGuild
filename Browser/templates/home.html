@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>eCommerce Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  {% load staticfiles %}
+    <link href="{% static '/' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    body{
+        background-color: #F2F2F2;
+    }
+    .bg-1 {
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+    }
+    .bg-2 {
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+    }
+    .bg-3 {
+      background-color: #fff; /* White */
+      color: #555555;
+    }
+    </style>
+</head>
+<body>
+
+
+<!––making navigation bar-->
+<nav class="navbar navbar-inverse bg-2">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">eCommerce</a>
+        </div>
+
+
+    <ul class="nav navbar-nav bg-2">
+        <li class="active"><a href="#">Home</a></li>
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Clothes<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Shirt</a></li>
+                <li><a href="#">Pants</a></li>
+                <li><a href="#">Underwear</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Accessories<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Bracelet</a></li>
+                <li><a href="#">Tie</a></li>
+                <li><a href="#">Glasses</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Accessories<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Bracelet</a></li>
+                <li><a href="#">Tie</a></li>
+                <li><a href="#">Glasses</a></li>
+            </ul>
+        </li>
+
+        <li>Welcome {{username}} haguu potty</li>
+    </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="/signIn.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li>{{username}}</li>
+        </ul>
+    </div>
+</nav>
+<!––navigation bar finished-->
+<div id="test">{{username}}</div>
+<!––making carousel-->
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+
+    <!-- Pics for slides -->
+        <div class="carousel-inner">
+
+            <div class="item active">
+                <img src="{% static 'carousel_1.jpg' %}" alt="clothes" style="width:100%;">
+                <div class="carousel-caption">
+                    <h3>Clothes</h3>
+                    <p>Choose from our designer range</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="{% static 'carousel_2.jpg' %}" alt="accessories" style="width:100%;">
+                <div class="carousel-caption">
+                    <h3>Accessories</h3>
+                    <p>Choose from our vast range of products</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<!––carousel finished-->
+
+<!––making site's footer-->
+<div class="bg-2">
+    <div class="container text-center">
+        <h3>About us:</h3>
+        <h3>This is a sample e-commerce website created by Ullas Srivastava</h3>
+        <h3>Uses Bootstrap, CSS, JavaScript, HTML 5</h3>
+    </div>
+</div>
+
+<div class="container-fluid bg-1 text-center">
+    <div class="container text-center">
+        <h3>Website sponsored by:</h3>
+        <img src="{% static 'bat1.jpg' %}" class="img-circle" alt="Bird" width="350" height="350">
+        <h3>This swan</h3>
+    </div>
+</div>
+<!––footer finished-->
+
+
+</body>
+</html>
