@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Pots</title>
+  <title>AboutUs</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -42,20 +42,6 @@
   .container-fluid {
       padding: 0px 50px;
   }
-  .container {
-      padding: 80px 120px;
-  }
-  .person {
-      border: 10px solid transparent;
-      margin-bottom: 25px;
-      width: 80%;
-      height: 80%;
-      opacity: 0.7;
-  }
-  .person:hover {
-      border-color: #f1f1f1;
-  }
-  }
   </style>
 </head>
 <body>
@@ -84,31 +70,37 @@
 
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span>{{username}}</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Checkout</a></li>
+            <li><a href="/Checkout/"><span class="glyphicon glyphicon-shopping-cart"></span> Checkout</a></li>
             <li><a href="/SignIn/"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
         </ul>
     </div>
 </nav>
 <!––navigation bar finished-->
-
 <!--jumbotron-->
+
 <div class="jumbotron text-center">
-  <h1>Your Cart</h1>
-  <p></p>
+  <h1>ALive Initiative</h1>
+  <p>Help us rebuild the world... One Plant at a time</p>
   <form class="form-inline">
     <div class="input-group">
+
 
     </div>
   </form>
 </div>
-<!--jumbotron finished-->
 
 
-<h1>Total:</h1>
+<!-- Container (About Section) -->
+<div class="container-fluid">
+  <h2>About Us</h2>
+  <p>We are a group who belive that the problem of global warming can be solved by planting enough trees. We specialize in providing our customers with healthy seeds, which they can plant in their backyard or in any garden.</p>
+</div>
 
-<button type="button" class="btn btn-danger">Reset</button>
-<button type="button" class="btn btn-success">Check Out</button>
-<h2>Items in Cart:</h2>
+<div class="container-fluid bg-grey">
+  <h2>Our Values</h2>
+  <h4><strong>MISSION:</strong> Our mission is to plant as many as 10,000 trees/plants by the end of the year</h4>
+  <p><strong>VISION:</strong> Our vision is to aid the sustainable development in today's society through planting more trees and reducing pollution
+</div>
 
 </body>
 </html>

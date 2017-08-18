@@ -11,3 +11,12 @@ class Shopper_database(models.Model):
 
     def __str__(self):
         return self.username
+
+
+class Item_database(models.Model):
+    items = models.CharField(max_length=10, blank=False)
+    total = models.CharField(max_length=3, blank=False)
+
+
+    def __str__(self):
+        return self.total

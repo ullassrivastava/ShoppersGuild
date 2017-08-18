@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Home</title>
+  <title>Pots</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -84,7 +84,7 @@
 
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span>{{username}}</a></li>
-            <li><a href="/Checkout/"><span class="glyphicon glyphicon-shopping-cart"></span> Checkout</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Checkout</a></li>
             <li><a href="/SignIn/"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
         </ul>
     </div>
@@ -93,8 +93,8 @@
 
 <!--jumbotron-->
 <div class="jumbotron text-center">
-  <h1>Organik.me</h1>
-  <p>Let's change the world together, one seed at a time...</p>
+  <h1>Your Cart</h1>
+  <p></p>
   <form class="form-inline">
     <div class="input-group">
 
@@ -104,73 +104,14 @@
 <!--jumbotron finished-->
 
 
-<!––making carousel-->
-<div class="container">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-    <!-- Pics for slides -->
-        <div class="carousel-inner">
-
-            <div class="item active">
-                <img src="{% static 'carousel_1.jpg' %}" alt="random tree" style="width:100%;">
-                <div class="carousel-caption">
-                    <h3>Step 1</h3>
-                    <p>Buy a seed pack containing seeds from random plant</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="{% static '2.jpg' %}" alt="Seeds" style="width:100%;">
-                <div class="carousel-caption">
-                    <h3>Step 2</h3>
-                    <p>Put the seedpack in the ground</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="{% static '4.jpg' %}" alt="Plants" style="width:100%;">
-                <div class="carousel-caption">
-                    <h3>Step 3</h3>
-                    <p>Water it, help it grow</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
-        </a>
-    </div>
-</div>
-<!––carousel finished-->
-<!––footer-->
-<div class="container-fluid bg-2 text-center">
-    <div class="container text-center">
-        <h3>Website sponsored by:</h3>
-        <img src="{% static 'bat1.jpg' %}" class="img-circle" alt="Bird" width="50" height="50">
-        <h3>ALive initiatives</h3>
-        <h28>©Copyright 2017</h28>
-    </div>
-</div>
-<!––footer finished-->
+<h1>Total:</h1>
+<button type="button" class="btn btn-danger">Reset</button>
+<button type="button" class="btn btn-success">Buy</button>
+<h2>Items in Cart:</h2>
+<div id= "score"></div>
 
 </body>
-<script>
-    total = 0
 
-    function
-</script>
+<script type='text/javascript' src="{% static 'tried.js' %}"></script>
 
 </html>
