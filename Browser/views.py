@@ -3,10 +3,11 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import loader
 from .models import Shopper_database
-from .forms import SignInForm, SignUpForm
+from .forms import *
 # Create your views here.
 
 username = ""
+checkout_items = {}
 
 
 def openSignIn(request):
@@ -56,8 +57,32 @@ def openHome(request):
 
 
 def openSeedPackHome(request):
-    global total
-    context = {'username': username_checker, 'total': total}
+    # global checkout_items
+    # form = PackAForm(request.POST)
+
+    # if request.method == 'POST':
+    #
+    #     form = PackAForm(request.POST)
+    #     print(form['packA_tb'].value())
+    #     print(form['packB_tb'].value())
+    #     print(form['packC_tb'].value())
+    #     print(form['QtyA'].value())
+    #
+    #     #a = form['QtyA'].value()
+    #     b = form['QtyA'].value()
+    #     if (form['packA_tb'].value() != None):
+    #         checkout_items.update(map(form['packA_tb'].value(), form['QtyA'].value()))
+    #
+    #         print(b)
+    #
+    #     context = {'username': username_checker}
+    #
+    #     template = loader.get_template('seed_pack_home.html')
+    # else:
+    #     context = {'username': username_checker}
+    #     template = loader.get_template('seed_pack_home.html')
+    # print(checkout_items)
+    context = {'username': username_checker}
     template = loader.get_template('seed_pack_home.html')
     return HttpResponse(template.render(context, request))
 
@@ -74,13 +99,6 @@ def openPots(request):
     return HttpResponse(template.render(context, request))
 
 
-def openCheckout(request):
-    context = {'username': username_checker}
-    template = loader.get_template('checkout.html')
-
-    return HttpResponse(template.render(context, request))
-
-
 def openAboutUs(request):
     context = {'username': username_checker}
     template = loader.get_template('about_us.html')
@@ -89,5 +107,59 @@ def openAboutUs(request):
 
 def openCheckout(request):
     template = loader.get_template('checkout.html')
-    context = {'username': username_checker}
+    context = {'username': username_checker, 'checkout_items':checkout_items}
+    return HttpResponse(template.render(context, request))
+
+
+def openHomeSeedABuy(request):
+    template = loader.get_template('a_home_seed.html')
+    context = {'username': username_checker, 'checkout_items':checkout_items}
+    return HttpResponse(template.render(context, request))
+
+
+def openHomeSeedBBuy(request):
+    template = loader.get_template('b_home_seed.html')
+    context = {'username': username_checker, 'checkout_items':checkout_items}
+    return HttpResponse(template.render(context, request))
+
+
+def openHomeSeedCBuy(request):
+    template = loader.get_template('c_home_seed.html')
+    context = {'username': username_checker, 'checkout_items':checkout_items}
+    return HttpResponse(template.render(context, request))
+
+
+def openGardenSeedABuy(request):
+    template = loader.get_template('a_garden_seed.html')
+    context = {'username': username_checker, 'checkout_items': checkout_items}
+    return HttpResponse(template.render(context, request))
+
+
+def openGardenSeedBBuy(request):
+    template = loader.get_template('b_garden_seed.html')
+    context = {'username': username_checker, 'checkout_items': checkout_items}
+    return HttpResponse(template.render(context, request))
+
+
+def openGardenSeedCBuy(request):
+    template = loader.get_template('c_garden_seed.html')
+    context = {'username': username_checker, 'checkout_items': checkout_items}
+    return HttpResponse(template.render(context, request))
+
+
+def openPotABuy(request):
+    template = loader.get_template('pot_a_buy.html')
+    context = {'username': username_checker, 'checkout_items': checkout_items}
+    return HttpResponse(template.render(context, request))
+
+
+def openPotBBuy(request):
+    template = loader.get_template('pot_b_buy.html')
+    context = {'username': username_checker, 'checkout_items': checkout_items}
+    return HttpResponse(template.render(context, request))
+
+
+def openPotCBuy(request):
+    template = loader.get_template('pot_c_buy.html')
+    context = {'username': username_checker, 'checkout_items': checkout_items}
     return HttpResponse(template.render(context, request))

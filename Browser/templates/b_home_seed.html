@@ -75,12 +75,25 @@
     </div>
 </nav>
 <!––navigation bar finished-->
-<img src="{% static 'house_pack_1.jpg' %}" class="img-circle person" alt="Random Name" width="255" height="255">
+<center><img src="{% static 'house_pack_2.jpg' %}" class="img-responsive" alt="Random Name" width="155" height="155"></center>
+
 <div class="container">
-<h1>Package A</h1>
+<h1>Home Seed Package B</h1>
 <p>Contains commonly found seeds in your region</p>
 <pre>
-Treat it like a treat!
+Benefit:  Air purifier. Pet friendly. Increase humidity. Controls air temperature
+Owners will have less allergy reactions as people are used to these homegrown pollens <br>
+
+Light: Medium to high.
+Planter: Built in sub-irrigation system (water your plant 3 times less often in comparison to regular pots). Made by Lechuza in Germany, shatterproof, 100% recyclable plastic.
+
+    It has all of the characteristics of your favorite garden hydrangeas – big leaves and even bigger blooms coming all
+    summer long in the shade. With alkaline soils the flowers are a deep pink verging on red that is unlike any other
+    hydrangea on the market. As autumn approaches the flowers turn a velvety lavender color that is eye-catching with
+    the purple tint of the leaves. In acidic soils the flower will be of a darker purple color. Growing 3-4 ft high, the
+    Grateful Red® Hydrangea will be the star of your shady garden or border. Plant it where you can enjoy its unique
+    coloration often as you walk by it. Make sure that you can reach it to cut the red blooms, too, because it will
+    provide you with armfuls of flowers for your vases all season.
 </pre>
 </div>
 
@@ -98,25 +111,27 @@ Treat it like a treat!
   </div>
 </div>
 
-<h1>total:</h1>
-<h1 id="data"></h1>
-<button type="button" class="btn btn-success">Add to cart</button>
+<center><h4>Qty Price: $1</h4><br></center>
+<center><h4>Total:</h4></center>
+<center><h4 id="data"></h4></center>
+<center><button type="button" class="btn btn-success">Add to cart</button></center>
+
 </body>
 <script>
     function Qty1(){
-        total = 1;
-        document.getElementById("data").innerHTML = "$"+total;
-
-    }
-
-    function Qty2(){
         total = 2;
         document.getElementById("data").innerHTML = "$"+total;
 
     }
 
+    function Qty2(){
+        total = 4;
+        document.getElementById("data").innerHTML = "$"+total;
+
+    }
+
     function Qty3(){
-        total = 3;
+        total = 6;
         document.getElementById("data").innerHTML = "$"+total;
     }
 </script>

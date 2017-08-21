@@ -75,12 +75,23 @@
     </div>
 </nav>
 <!––navigation bar finished-->
-<img src="{% static 'house_pack_1.jpg' %}" class="img-circle person" alt="Random Name" width="255" height="255">
+<center><img src="{% static 'pot2.jpg' %}" class="img-responsive" alt="Random Name" width="155" height="155"></center>
+
 <div class="container">
-<h1>Package A</h1>
+<h1>Pot Package B</h1>
 <p>Contains commonly found seeds in your region</p>
 <pre>
-Treat it like a treat!
+Benefit(s):
+    Decorative.
+    Gives your study table refreshing look.
+    Gives you a buddy to study with<br>
+
+    Everyone needs a touch of whimsy in their desk or table. Abracadabra! Our initiative provides just the right product
+    for you; Soft pink and white bi-color flowers pop out of black wand-shaped stems, just like a magician’s trick. As
+    the flowers age they turn a deep hot pink. Black and pink combo puts on quite a show in your mixed border. It also
+    shines as a standout specimen plant, whether in a container on your patio or in your garden with other shade lovers
+    around its feet.
+
 </pre>
 </div>
 
@@ -97,26 +108,27 @@ Treat it like a treat!
     </ul>
   </div>
 </div>
+<center><h4>Qty Price: $2</h4><br></center>
+<center><h4>Total:</h4></center>
+<center><h4 id="data"></h4></center>
+<center><button type="button" class="btn btn-success">Add to cart</button></center>
 
-<h1>total:</h1>
-<h1 id="data"></h1>
-<button type="button" class="btn btn-success">Add to cart</button>
 </body>
 <script>
     function Qty1(){
-        total = 1;
-        document.getElementById("data").innerHTML = "$"+total;
-
-    }
-
-    function Qty2(){
         total = 2;
         document.getElementById("data").innerHTML = "$"+total;
 
     }
 
+    function Qty2(){
+        total = 4;
+        document.getElementById("data").innerHTML = "$"+total;
+
+    }
+
     function Qty3(){
-        total = 3;
+        total = 6;
         document.getElementById("data").innerHTML = "$"+total;
     }
 </script>

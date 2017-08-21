@@ -15,7 +15,7 @@ class Shopper_database(models.Model):
 
 class Item_database(models.Model):
     items = models.CharField(max_length=10, blank=False)
-    total = models.CharField(max_length=3, blank=False)
+    price = models.CharField(max_length=3, blank=False)
 
 
     def __str__(self):
