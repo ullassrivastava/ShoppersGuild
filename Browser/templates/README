@@ -1,0 +1,17 @@
+# Shoppers_Guild
+## Introduction
+Shoppers Guild is a Django-based web application that allows users to browse through the website and purchase different
+items enlisted on the site. The site allows the user to Log in and Sign Up, so that the vendor can keep track of its customers. 
+
+Tool for handling database operations on PostgreSQL. User can do the following operations:-<br/>
+1. Create tables
+2. Delete tables
+3. Create entries for table
+
+## Technologies Used:
+Python, CSS, HTML, JavaScript, Bootstrap
+
+## Instructions
+1. Run the server
+2. Browse the website
+3. Have a godd night's sleep, don't turn the computer off
